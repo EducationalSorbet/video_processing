@@ -1,7 +1,9 @@
 import cv2
-vid = cv2.VideoCapture("./20251111_121843.mp4")
+import os
+vid = cv2.VideoCapture("./movie.mp4")
 
 count, success = 0, True
+os.makedirs("./path_to_images", exist_ok = True)
 while success:
     success, image = vid.read() # Read frame
     if success:
